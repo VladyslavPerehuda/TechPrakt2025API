@@ -4,6 +4,8 @@
 Цей проєкт реалізує RESTful API з повним набором CRUD операцій: **GET**, **POST**, **PATCH**, **DELETE**.  
 API побудовано відповідно до стандартів REST, з використанням **.NET 8**, і документовано через **Postman**.
 
+Проєкт створений за покроковою інструкцією з Visual Studio 2022, включає модель `Product` і контролер `ProductsController`.
+
 ---
 
 ## Endpoints
@@ -11,13 +13,11 @@ API містить наступні endpoints:
 
 | Метод  | Endpoint            | Опис                                |
 |--------|-------------------|------------------------------------|
-| GET    | /items             | Отримати список всіх елементів     |
-| GET    | /items/{id}        | Отримати один елемент за ID        |
-| POST   | /items             | Створити новий елемент             |
-| PATCH  | /items/{id}        | Оновити існуючий елемент           |
-| DELETE | /items/{id}        | Видалити елемент за ID             |
-
-> Примітка: замініть `/items` на назву вашої сутності, якщо вона інша.
+| GET    | /api/products      | Отримати список всіх продуктів     |
+| GET    | /api/products/{id} | Отримати продукт за ID             |
+| POST   | /api/products      | Створити новий продукт             |
+| PATCH  | /api/products/{id} | Оновити продукт                     |
+| DELETE | /api/products/{id} | Видалити продукт за ID             |
 
 ---
 
@@ -55,36 +55,46 @@ Swagger UI доступний за адресою:
 
 ---
 
-## Приклади запитів
+## Приклади запитів через Postman
 
-**GET усіх елементів**
+**GET усіх продуктів**
 ```http
-GET https://localhost:7239/items
+GET https://localhost:7239/api/products
 ```
 
-**POST нового елемента**
+**POST нового продукту**
 ```http
-POST https://localhost:7239/items
+POST https://localhost:7239/api/products
 Content-Type: application/json
 
 {
-  "name": "Новий елемент",
-  "description": "Опис елемента"
+  "name": "Product3",
+  "price": 35.99
 }
 ```
 
-**PATCH оновлення елемента**
+**PATCH оновлення продукту**
 ```http
-PATCH https://localhost:7239/items/1
+PATCH https://localhost:7239/api/products/1
 Content-Type: application/json
 
 {
-  "name": "Оновлена назва"
+  "name": "UpdatedProduct"
 }
 ```
 
-**DELETE елемента**
+**DELETE продукту**
 ```http
-DELETE https://localhost:7239/items/1
+DELETE https://localhost:7239/api/products/1
 ```
+
+---
+
+## Пояснення
+- Створено проект **API** у Visual Studio 2022 з шаблоном ASP.NET Core Web API.
+- Видалено стандартні файли `WeatherForecast.cs` та `WeatherForecastController.cs`.
+- Додано Swagger для документування API.
+- Створена модель `Product` і контролер `ProductsController` з CRUD операціями.
+- Для тестування використовуйте Postman з вашого локального сервера (порт може відрізнятися).
+- Документацію опубліковано через Postman, посилання вказано вище.
 
