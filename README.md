@@ -2,7 +2,7 @@
 API для технологічної практики
 
 ## Посилання на документацію
-https://documenter.getpostman.com/view/ТУТ_ТВОЄ_ПОСИЛАННЯ
+```https://documenter.getpostman.com/view/ТУТ_ТВОЄ_ПОСИЛАННЯ```
 
 ## Інструкція запуску проєкту
 
