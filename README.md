@@ -14,7 +14,6 @@ API містить наступні endpoints:
 | Метод  | Endpoint            | Опис                                |
 |--------|-------------------|------------------------------------|
 | GET    | /api/products      | Отримати список всіх продуктів     |
-| GET    | /api/products/{id} | Отримати продукт за ID             |
 | POST   | /api/products      | Створити новий продукт             |
 | PATCH  | /api/products/{id} | Оновити продукт                     |
 | DELETE | /api/products/{id} | Видалити продукт за ID             |
@@ -23,7 +22,7 @@ API містить наступні endpoints:
 
 ## Документація
 Всі endpoints задокументовані у **Postman**:  
-[Перейти до документації Postman](https://documenter.getpostman.com/view/ТУТ_ТВОЄ_ПОСИЛАННЯ)
+[Перейти до документації Postman](https://documenter.getpostman.com/view/53573150/2sBXinFVPf)
 
 ---
 
@@ -34,7 +33,7 @@ API містить наступні endpoints:
 
 ### 2. Клонування репозиторію
 ```bash
-git clone https://github.com/ТВІЙ_АКАУНТ/TechPrakt2025API.git
+git clone https://github.com/VladyslavPerehuda/TechPrakt2025API
 cd TechPrakt2025API
 ```
 
@@ -97,4 +96,3 @@ DELETE https://localhost:7239/api/products/1
 - Створена модель `Product` і контролер `ProductsController` з CRUD операціями.
 - Для тестування використовуйте Postman з вашого локального сервера (порт може відрізнятися).
 - Документацію опубліковано через Postman, посилання вказано вище.
-
